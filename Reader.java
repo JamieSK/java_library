@@ -19,10 +19,10 @@ public class Reader {
 
   public boolean addToBookshelf(Book book) {
     int howManyBooks = booksToRead();
-    try {
+    if (howManyBooks < this.bookshelf.length) {
       this.bookshelf[howManyBooks] = book;
       return true;
-    } catch (IndexOutOfBoundsException error) {
+    } else {
       return false;
     }
   }

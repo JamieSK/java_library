@@ -17,10 +17,8 @@ public class Library {
 
   public void add(Book book) {
     int numberOfBooks = numberOfBooks();
-    try {
+    if (numberOfBooks < this.stock.length) {
       this.stock[numberOfBooks] = book;
-    } catch (IndexOutOfBoundsException error) {
-
     }
   }
 
